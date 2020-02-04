@@ -1,0 +1,367 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* custom font faces used to display on the website; I gave each font face a name to associate with the style */
+@font-face{
+	src: url(../fonts/Montserrat-Bold.ttf);
+	font-family: montbold;
+}
+
+@font-face{
+	src: url(../fonts/Montserrat-Regular.ttf);
+	font-family: montreg;
+}
+
+@font-face{
+	src: url(../fonts/Montserrat-Medium.ttf);
+	font-family: montmed;
+}
+
+/*I changed the body colour to match the website */
+body{
+    background-color: #f7f7ff;
+}
+
+/* centered the container in the middle of the screen and gave it padding to push it away from the edges of the screen */
+.container{
+	margin: 0 auto;
+	padding: 0 40px;
+}
+
+/******************
+	   HEADER
+*******************/
+.site-header img{
+	width: 114.73px;
+}
+
+/* Added the montbold font and resized it to the font size found in XD (Same goes for every font from now on */
+h1{
+	font-family: montbold;
+	font-size: 60px;
+}
+
+.own-boss p{
+	font-family: montreg;
+	font-size: 24px;
+}
+
+/*******************
+	CONTACT FORM
+********************/
+
+/* Used border radius to round the corners and used max-width: 100% to have it resize properly from edge to edge */
+.dashform{
+	background-color: #fff;
+	box-shadow: 5px 10px 10px #aaa;
+	border-radius: 25px;
+	padding: 20px;
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+/* Used margin bottom to space out "apply now" from the text below */
+h2{
+	font-family: montbold;
+	font-size: 40px;
+	margin-bottom: 15px;
+}
+
+.dashform .info{
+	font-family: montreg;
+	font-size: 16px;
+}
+
+/* Here I targetted the inputs so that I could directly design them by recoloring, reshaping, and gave them
+10px margin on the top and bottom to space each out. I also made the width 90% instead of 100% to give the fields
+more space instead of touching the edge of the form + percentage RESIZES with page */
+.fields input[type="text"],
+.dashform-footer input[type="text"],
+.fields input[type="tel"],
+.fields input[type="email"]{
+	font-family: montreg;
+	font-size: 16px;
+	border-radius: 10px;
+	border-style: none;
+	background-color: #f4f4f5;
+	margin: 10px 0;
+	padding: 10px;
+	width: 90%;
+}
+
+/* Created a grid with the fields to later reorganize the input fields in the tabet + desktop phase */
+.fields{
+	display: grid;
+	grid-template-rows: repeat(4, 1fr);
+}
+
+/* Resized checkbox to be larger */
+input[type="checkbox"]{
+	width: 20px;
+	height: 20px;
+}
+
+/* Used flex to align checkbox with Agreement Message */
+.dashform div{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin: 10px 0;
+}
+
+/* Limited the width of the paragraph text beside the checkbox to better mimic the website layout and gave line height
+to space out the text */
+.dashform p{
+	font-family: montreg;
+	font-size: 14px;
+	max-width: 200px;
+	line-height: 20px;
+}
+
+/* used width 100% to have button resize with page and gave it margin bottom to give button more room in form */
+.dashform button{
+	background-color: #57eeab;
+	border: none;
+	border-radius: 10px;
+	font-family: montbold;
+	font-size: 24px;
+	width: 100%;
+	padding: 10px 20px;
+	margin-bottom: 15px;
+}
+
+/* removed underline to match the website */
+.dashform p a{
+	color: #ff8480;
+	text-decoration: none;
+}
+
+/* Used max-width: 100% to span the whole page and exceed the container and gave it padding and the spacing needed */
+footer{
+	background-color: #fffd8c;
+	max-width: 100%;
+	margin-top: 50px;
+	padding: 30px;
+}
+
+h3{
+	font-family: montbold;
+	font-size: 18px;
+	line-height: 25px;
+}
+
+footer p{
+	font-family: montreg;
+	font-size: 16px;
+	margin-top: 10px;
+	line-height: 25px;
+}
+
+/* Changed the footer to grid. Made the second column larger so the city input would appear larger on the page but
+kept the rows the same fraction size */
+footer form{
+	display: grid;
+	grid-gap: 25px;
+	grid-template-columns: 1fr 3fr;
+	grid-template-rows: 1fr 1fr;
+}
+
+/* Chose to target the placeholder directly for the inputs in the footer to change the font family */
+footer section form input::placeholder{
+	font-family: montmed;
+}
+
+/* Positioned the hours input field in the first column and first row to keep it in the top right and
+to the left of the city input field */
+.hours{
+	grid-column: 1;
+	grid-row: 1;
+	font-family: montmed;
+}
+
+/* width: 100% used to resize button with website, border radius used to round edges,
+and grid column span 2 is used to span the button over both columns to mimic the website */
+footer form button{
+	color: #fff;
+	background-color: #ff8480;
+	border: none;
+	border-radius: 10px;
+	font-family: montbold;
+	font-size: 24px;
+	width: 100%;
+	padding: 10px;
+	grid-column: span 2;
+}
+
+/* aligned the social media images in the center of the mobile screen and used margin top to push them further down */
+.social-media{
+	text-align: center;
+	margin-top: 30px;
+}
+
+/* Resized social media icons and added max width 100% to resize with the page */
+.social-media img{
+	width: 10%;
+	height: 40px;
+	margin: 0 25px;
+	max-width: 100px;
+}
+
+/* Used border-radius: 50% to round facebook edges to resemble icon found on example */
+.fb{
+	border-radius: 50%;
+}
+
+/*********************
+	TABLET VIEW
+*********************/
+@media screen and (min-width: 767px){
+
+	/*changed and reordered each of the form input fields by targetting the class to match the
+	tablet + desktop form */
+	.fn{
+		order: 1;
+	}
+	.ln{
+		order: 2;
+	}
+	.email{
+		order: 3;
+	}
+	.tel{
+		order: 4;
+	}
+	.check{
+		order: 5;
+	}
+
+	/* reformatted the grid to fit the footer input fields correctly
+	used 1fr 3fr and 2.5fr to match the sizes for each respective input field and gave it only 1 row
+	as there is no more use for 2 */
+	footer form{
+		grid-template-columns: 1fr 3fr 2.5fr;
+		grid-template-rows: 1fr;
+	}
+
+	/* Placed the footer button in the 3rd column, 1st row to match the website and 
+	place the button in the right-most position */
+	footer form button{
+		grid-column: 3;
+		grid-row: 1;
+	}
+}
+
+/********************
+	DESKTOP VIEW
+*********************/
+@media screen and (min-width: 1200px){
+	/* removed the scooter image from the page as it now needs to be placed in the background
+	for the text to appear over the design */
+	.scooter{
+		display: none;
+	}
+
+	/* Targetted the div .main-grid to separate the text (left side) from the form (right side)
+	and also used grip gap to push the elements to either side of the page */
+	.main-grid{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 500px;
+	}
+
+	/* Used inline to display the link and the checkbox side by side without cutting below */
+	.bottom-link{
+		display: inline;
+	}
+
+	/* Included the background image after removing the foreground "scooter" image from the page
+	and made the background image stable, not repeat infinitely, and positioned it in the center
+	to mimic the website */
+	body{
+		background-image: url(../images/bg-image/scooter.svg);
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-position: center;
+		background-size: 600px;
+	}
+
+	/* Changed the footer into a grid to separate the social media from the form by using 2 same sized columns.
+	Also used grid gap once again to part each of the elements */
+	footer{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 400px;
+		padding: 20px;
+	}
+
+	/* Changed the social media icons into a grid format to re-order the images to match the desktop view */
+	.social-media{
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+	}
+
+	/* Changed the order of each icon to match landing page design */
+	.insta{
+		order: 1;
+	}
+	.tweet{
+		order: 2;
+	}
+	.fb{
+		order: 3;
+	}
+	.li{
+		order: 4;
+	}
+
+	/* Resized the icons to match the desktop view better and used percentage for proper resizing with page */
+	.social-media img{
+		width: 50%;
+	}
+}
