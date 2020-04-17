@@ -1,3 +1,5 @@
+/* I am using CSS Reset Code to help start from scratch when designing my website */
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -47,9 +49,14 @@ table {
 	border-spacing: 0;
 }
 
+/* To start and make the site neat, I chose to make all images 100% width so they would not project off of the page */
+
 img{
     width: 100%;
 }
+
+/* I chose to begin with resizing and styling the text on my page, and I already generally know what font family
+I will be using as well as its size. Here, I am using futura-pt which is an Adobe Font I linked to my css */
 
 h1{
     font-size: 3rem;
@@ -87,10 +94,16 @@ p{
     line-height: 30px;
 }
 
+
+/* For the navigation, I wanted a bolder look so I used a helvetica font and bumped up the font-weight */
+
 a{
     font-family: helvetica;
     font-weight: 700;
 }
+
+/* I also wanted this bold look on my buttons to help guide users to click. As well as this,
+I already gave it some padding for a thicker look and changed the border-radius to round the edges */
 
 button{
     font-family: helvetica;
@@ -100,6 +113,10 @@ button{
     padding: 15px 30px;
     border-radius: 5px;
 }
+
+
+/* To help move the content away from the edges of the screen, I used a max width restriction and margin 0 auto
+to help move everything in the center. I also gave padding 2rem to bring in the content from the corners */
 
 .container{
     max-width: 80rem;
@@ -112,13 +129,25 @@ header{
     background-color: #232323;
 }
 
+/* I wanted to align the text in the center of the header so i used text-align: center,
+I also gave it an animation to spark the user's interest and you will find the keyframes at the
+very bottom of the css file */
+
 .logo{
     text-align: center;
+    animation-name: title;
+    animation-timing-function: ease-out;
+    animation-duration: 1s;
 }
+
+/* I didn't want the logo to appear too large so I changed the width to 300px instead of 100% */
 
 .logo img{
     width: 300px;
 }
+
+/* To create two colours in one line of text, I made sure both words were inline with each other as to not
+separate them and coloured them accordingly */
 
 .green{
     font-size: 1.4rem;
@@ -132,6 +161,10 @@ header{
     display: inline;
 }
 
+/* I gave the list items more padding for a fuller effect and wanted to use a nice transition of colour whenever
+you were hovering over the navigation items. Below you can also see the hover property that I used to finish
+the transition from light blue to a darker blue */
+
 nav ul li{
     background-color: #13A7E8;
     text-align: center;
@@ -143,6 +176,9 @@ nav ul li:hover{
     background-color:#2975a8;
 }
 
+/* To make sure the user can click anywhere in each navigation box to bring them to the desired page, I made the
+anchor tag display: block to fill the entire area with the link and gave it extra padding for a larger look */
+
 nav ul li a{
     text-decoration: none;
     color: #fff;
@@ -150,9 +186,14 @@ nav ul li a{
     padding: 10px;
 }
 
+/* To help separate the logo text from the navigation, I spaced it out with margin-bottom */
+
 .logo-text{
     margin-bottom: 20px;
 }
+
+/* To mimic the look of the prototype, I needed to get some text to appear over the banner image.
+To do this, I used position: relative for the banner itself and positioned the text overtop with position: absolute */
 
 .banner{
     position: relative;
@@ -167,6 +208,9 @@ nav ul li a{
     padding: 5px;
 }
 
+/* To make the second line of text appear underneath the first but resize the same way, I needed to use
+the calc function to use the same percentage but add some pixels for separation */
+
 .banner p{
     background-color: #13A7E8;
     color: #fff;
@@ -176,26 +220,48 @@ nav ul li a{
     padding: 5px;
 }
 
+/* To create the colourful panels found on the prototype, I used a div around each heading and paragraph,
+then chose to colour it and give it a bigger display with more padding. I also used margin-bottom to push
+the service h1 away as to give more breathing room on the page */
+
 .welcome{
     padding: 20px;
     background-color: #06cf9c;
     margin-bottom: 50px;
 }
 
+/* The "Welcome." heading was far too close to the paragraph so I yet again used margin-bottom to
+space it apart */
+
+.welcome h2{
+    margin-bottom: 20px;
+}
+
+/* I created a grid consisting of 3 columns and 1 row for the button to easily move the button to the right of the panel
+to help have the same appearance as my prototype */
+
 .button-grid{
     display: grid;
-    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
 }
+
+/* I wanted the buttons to have a unqiue transition of inverted colours when hovering over the element,
+so I used transition all at 0.3 seconds for a quick transition of text + background color */
 
 .button-grid a{
     transition: all 0.3s;
 }
 
+/* Here is the hover state I used to complete the transition of colours */
+
 .button-grid a:hover{
     color: #fff;
     background-color: #232323;
 }
+
+/* For the more button, I made sure it was in the right most grid column and used justify-self: center to help center
+the button in its grid space */
 
 .more{
     font-family: helvetica;
@@ -203,17 +269,32 @@ nav ul li a{
     color: black;
     background-color: #fff;
     border: none;
-    padding: 15px 30px;
+    padding: 15px 50px;
     border-radius: 5px;
     grid-column: 3;
     text-decoration: none;
     justify-self: center;
+    margin-top: 20px;
 }
+
+/* Aligned the "Service" text in the middle of the screen to match the prototype */
+
+.container h1{
+    text-align: center;
+}
+
+/* More margin-bottom to help space out the content */
 
 .services div{
     padding: 20px;
     margin-bottom: 20px;
 }
+
+.services h3{
+    margin-bottom: 20px;
+}
+
+/* Colouring the panels accordingly */
 
 .coding{
     background-color: #13A7E8;
@@ -229,11 +310,15 @@ nav ul li a{
 
 /* FOOTER */
 
+/* Gave the footer the same colour as the header and extra padding to match the XD file */
+
 footer{
     background-color: #232323;
     text-align: center;
     padding: 10px;
 }
+
+/* Spacing out more content */
 
 .copyright{
     margin-bottom: 20px;
@@ -242,6 +327,9 @@ footer{
 .phone-number{
     margin-bottom: 20px;
 }
+
+/* Created a grid around the social media icons to display them beside each other in 3 columns and 1 row.
+I also used max width to tighten the grid and justified the icons to fix them in the center of their grid space. */
 
 .social-media{
     display: grid;
@@ -252,6 +340,8 @@ footer{
     justify-items: center;
 }
 
+/* Restricted the width to the icons at 40px */
+
 .social-media img{
     width: 40px;
 }
@@ -260,6 +350,8 @@ footer{
 /***************
     About
 ***************/
+
+/* Matched the education panel with the same colour and similar padding for a cleaner display */
 
 .education{
     padding: 20px;
@@ -273,6 +365,9 @@ footer{
     margin-bottom: 50px;
 }
 
+/* Used a grid display for the unordered list to have the list items placed exactly how it looks on the prototype.
+I also included a grid gap to space out the content and once again justified the content to center them in the element */
+
 .soft-skills ul{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -280,6 +375,9 @@ footer{
     grid-gap: 20px;
     justify-items: center;
 }
+
+/* Both soft / hard skill panels were the same style, so I used a comma to save on coding both.
+I once again used the Futura PT font to match the XD file with the link in the html to the web project */
 
 .soft-skills ul li,
 .hard-skills ul li{
@@ -293,6 +391,8 @@ footer{
     background-color: #0d7aa8;
     margin-bottom: 50px;
 }
+
+/* Pretty much the same idea as the soft skills panel, but this time the grid onyl had 2 columns and 2 rows */
 
 .hard-skills ul{
     display: grid;
@@ -309,6 +409,9 @@ footer{
     margin-bottom: 50px;
 }
 
+/* Gave the portfolio button a similar look to the more button found on the home page while using grid-column: 3 to 
+move the button to the right on the panel */
+
 .portfolio-button{
     font-family: helvetica;
     font-weight: 700;
@@ -321,6 +424,19 @@ footer{
     text-decoration: none;
     justify-self: center;
     text-align: center;
+    margin-top: 20px;
+}
+
+/* Here I noticed that many of the h2 headings were too close to the text beneath, so I decided
+to create a list of all h2 elements that needed extra margin bottom */
+
+.education h2,
+.soft-skills h2,
+.hard-skills h2,
+.why-choose-me h2,
+.about-form h2,
+.my-information h2{
+    margin-bottom: 20px;
 }
 
 /* Contact Field */
@@ -334,11 +450,17 @@ footer{
     margin: 20px 0;
 }
 
+/* Used a focus colour to help users know when they were targeting a certain element on the contact form */
+
 input:focus,
 textarea:focus{
 	outline-color: #06cf9c;
 	border-radius: 20px;
 }
+
+/* Used display block to have the input fields stretch across the panel,
+restricted the width to 95% as it was awkwardly too close to the right edge,
+and gave it a transition that would curve the border radius when targeting the fields */
 
 textarea, input{
     font-family: futura-pt, sans-serif;
@@ -352,6 +474,8 @@ textarea, input{
 	transition: border-radius 0.3s;
 }
 
+/* Restricted the size of the text area box by keeping it at a height of 100px with no possibility to resize the box */
+
 textarea{
 	resize: none;
 	height: 100px;
@@ -361,13 +485,27 @@ textarea{
     text-align: center;
 }
 
+/* Once again moved the button to the right bottom corner of the panel with grid-column: 3 and included
+a transition for all to have the colours invert */
+
 button{
+    font-size: 16px;
     grid-column: 3;
+    transition: all 0.3s;
+}
+
+/* This hover is used for the transition effect */
+
+button:hover{
+    color: #fff;
+    background-color: #232323;
 }
 
 /****************
     PORTFOLIO
 ****************/
+
+/* All panels coloured accordingly and given extra padding and margin top / bottom to give space between each div */
 
 .coding-section h2{
     background-color: #13a7e8;
@@ -407,7 +545,11 @@ button{
     TABLET VIEW
 **********************/
 
+/* Set a media query for past 700px to begin the tablet view */
+
 @media screen and (min-width: 700px){
+
+    /* Increased the font size for each of the text elements to copy the XD prototype */
 
     h1{
         font-size: 60px;
@@ -424,11 +566,20 @@ button{
 
 
     /* Header */
+
+    /* Here I changed the grid display for the navigation by forming 4 columns and 1 row for a horizontal
+    appearance. I used 4 columns instead of 3 to add extra space to the right of the navigation bar to help
+    mimic the prototype */
+
     nav ul{
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: 1fr;
     }
+
+    /* I wanted to get the logo and the "web design" text side by side so I created 2 columns and 1 row while aligning
+    and justifying the items inside to fit in the middle of the grid. The reason I used px instead of fr was to
+    make the logo and slogan smaller than before with less resizing */
 
     .logo{
         display: grid;
@@ -438,13 +589,20 @@ button{
         align-items: center;
     }
     
+    /* Removed the margin bottom that was needed for the vertical mobile display as it was causing unwanted spacing */
+
     .logo-text{
         margin-bottom: 0;
     }
 
+    /* Changed the size of the logo image to fit perfectly inside the header */
+
     .logo img{
         width: 75px;
     }
+
+    /* Created a grid out of the entire header consisting of the navigation on the right hand side while the 
+    logo section is fixed to the top left corner */
 
     header{
         display: grid;
@@ -454,11 +612,18 @@ button{
 
 
     /* Footer */
+
+    /* The footer needed to be reworked as it was also changing to a horizontal display. The grid used 3 columns, which is
+    one for the contact info, the copyright line, and the social media icons. */
+
     footer{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr;
     }
+
+    /* The footer contact information needed to be re-organized so I used fixed pixel columns to tighten their appearance
+    and made sure to have it in the first column and row available */
 
     .contact-footer{
         display: grid;
@@ -476,16 +641,23 @@ button{
         font-size: 16px;
     }
 
+    /* To match the prototype, I shifted the copyright line in the middle of the footer by placing it in the first row, but
+    most importantly, the 2nd column (the middle) */
+
     .copyright{
         grid-column: 2;
         grid-row: 1;
     }
+
+    /* The social media icons were not sizing how I wanted them to, so I restricted their grid size with 75px each */
 
     .social-media{
         grid-template-columns: repeat(3, 75px);
         grid-column: 3;
         grid-row: 1;
     }
+
+    /* Removed margin that was causing unwanted spacing */
 
     .copyright{
         margin-bottom: 0;
@@ -497,9 +669,14 @@ button{
 
     /* Home */
     
+    /* Once again changed the calculation as both pieces of text over the banner image were starting to overlap */
+
     .banner p{
         top: calc(10% + 75px);
     }
+
+    /* Changed the services grid to match the XD file by having 2 columns and 2 rows, but also spanning the coding
+    panel from the first column to the second */
 
     .services{
         display: grid;
@@ -507,11 +684,16 @@ button{
         grid-template-rows: 1fr 1.5fr;
         grid-gap: 20px;
     }
+
     .coding{
         grid-column: 1 /span 2;
     }
 
     /* About */
+
+    /* The about page needed to shift around, so I used 2 columns and 4 rows to properly separate the panels on the
+    page. The reason the first row is slightly larger than the middle 2 rows was because the panel was larger
+    in the prototype and needed more space */
     .about-grid{
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -523,6 +705,11 @@ button{
     .hard-skills ul li{
         font-size: 20px;
     }
+
+    /* The education panel needed to span both columns in the top row,
+    the why-choose-me panel had to span both columns,
+    the contact grid had to span both columns,
+    but the soft / hard skill panels were untouched to match the XD file */
 
     .education{
         grid-column: 1 /span 2;
@@ -537,6 +724,10 @@ button{
     }
 
     /* Portfolio */
+
+    /* The illustrator section needed to have 2 columns and 2 rows for the grid so that the armor illustration
+    could span both columns underneath to match the prototype */
+
     .illustrator{
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -547,11 +738,16 @@ button{
         grid-column: 1 /span 2;
     }
 
+    /* The Photoshop section also needed to change as the posters were now side by side in tablet view */
+
     .photoshop{
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 20px;
     }
+
+    /* The gallery of imagery needed to have 2 columns and 5 rows, with the top row larger than the others
+    as 1 image was going to span both columns to even out the page */
 
     .gallery{
         display: grid;
@@ -559,6 +755,8 @@ button{
         grid-template-rows: 2fr 1fr 1fr 1fr 1fr;
         grid-gap: 20px;
     }
+
+    /* The portrait image was targeted through its class and I chose to span it as the large top image */
 
     .portrait{
         grid-column: 1 /span 2;
@@ -571,6 +769,8 @@ button{
 
 @media screen and (min-width: 1100px){
 
+    /* All that needed to be resized for the text was mainly the h2 and paragraph size */
+
     h2{
         font-size: 50px;
     }
@@ -580,32 +780,64 @@ button{
     }
 
     /* Home */
+
+    /*The services would change once more and have only 1 row with 3 columns to have each panel
+    side by side in a horizontal fashion */
+
     .services{
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr;
     }
+
+    /* The coding section needed to be in the first column, so I positioned it with grid-column: 1 */
 
     .coding{
         grid-column: 1;
     }
 
     /* About */
+
+    /* The contact me grid would change again and this time have 2 columns in the same panel
+    to break apart the information */
+
     .contact-me{
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 20px;
     }
 
+    .soft-skills ul li,
+    .hard-skills ul li{
+        font-size: 24px;
+    }
+
+    /* Increased the line height in the information to help even out the weight in the panel */
+
+    .my-information p{
+        font-size: 30px;
+        line-height: 100px;
+    }
+
     /* Portfolio */
+
+    /* The bakery grid was now fully horizontal, so I created 2 columns around the information
+    to have the image on the left and the written content on the right */
     .bakery-grid{
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 20px;
+        margin-bottom: 50px;
     }
+
+
+    /* The text was not centered with the image so I used align-self to fix the issue */
 
     .bakery-text{
         align-self: center;
     }
+
+    /* Removed margin on the bottom of the bakery bonanza section as it was causing unwanted spacing,
+    same with the h2 heading below */
 
     .bakery-bonanza{
         margin-bottom: 0;
@@ -615,18 +847,37 @@ button{
         margin-top: 0;
     }
 
+    /* I needed the illustrator and photoshop grids to be side by side in desktop view, so I used the .dd-grid
+    to create another grid display to have 2 columns and put both sections side by side
+    (once again, grid gap is used to space the content apart) */
+
     .dd-grid{
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 20px;
     }
 
+    /* The gallery would change once more in its display and would become a 3x3 grid */
+
     .gallery{
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
     }
 
+    /* The portrait was not in the correct spot, so I used grid-column: 1 to move it in the first position */
+
     .portrait{
         grid-column: 1
+    }
+}
+
+/* Created an animation for the title to slide it on-screen from left to right */
+
+@keyframes title{
+    0%{
+        transform: translate(-1000px, 0);
+    }
+    100%{
+        transform: translate(0, 0);
     }
 }
