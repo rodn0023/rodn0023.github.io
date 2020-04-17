@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The Bakery Bonanza</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- created a web project in adobe fonts to use new and creative fonts -->
+    <link rel="stylesheet" href="https://use.typekit.net/tme8vlr.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <!-- created a div with an image and an h1 to later format the title on top of the image -->
+        <div class="banner">
+            <img src="images/bakery-header.jpg" class="bakery-background" alt="photo of bakery"/>
+            <h1> The Bakery Bonanza </h1>
+        </div>
+
+        <!-- created a navigation bar for the webpage with an unordered list to link to other html pages -->
+        <nav class="main-nav">
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- created a container for all content besides the header and footer
+    to later customize the margin and padding for the page in css -->
+    <div class="container">
+
+        <section class="welcome">
+            <h2>A little taste of heaven.</h2>
+            <p>The Bakery Bonanza is a Place with the best treats imaginable. We welcome you with open arms and baked goods.</p>
+
+            <!-- used a picture element to change the welcome image when resizing the page -->
+            <picture>
+                <source srcset="images/bread-fiesta.jpg" media="(min-width: 1000px)">
+                <img src="images/bread-basket.jpg" alt="basket of bread">
+            </picture>
+        </section>
+
+        <h2>What We Offer</h2>
+
+        <!-- created a div around the sections containing h3 and img elements to use in a grid -->
+        <div class="content">
+            <section class="food">
+                <h3>Donuts</h3>
+                <img class="menu" src="./images/donuts.jpg" alt="plate of donuts">
+            </section>
+            <section class="food">
+                <h3>Bread</h3>
+                <img class="menu" src="./images/bread.jpg" alt="sliced bread">
+            </section>
+            <section class="food">
+                <h3>Cupcakes</h3>
+                <img class="menu" src="./images/cupcakes.jpg" alt="batch of cupcakes">
+            </section>
+            <section class="food">
+                <h3>Pastries</h3>
+                <img class="menu" src="./images/pastry.jpg" alt="plate of pastries">
+            </section>
+            <section class="food">
+                <h3>Cake</h3>
+                <img class="menu" src="./images/cake.jpg" alt="marshmellow cake">
+            </section>
+            <section class="food">
+                <h3>and More!</h3>
+                <img class="menu" src="./images/new-arrivals.jpg" alt="picture of bread">
+            </section>
+        </div>
+
+    </div>
+
+    <footer>
+        Copyright &copy; The Bakery Bonanza 2020
+    </footer>
+
+</body>
+
+</html>

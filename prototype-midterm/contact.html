@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The Bakery Bonanza</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- created a web project in adobe fonts to use new and creative fonts -->
+    <link rel="stylesheet" href="https://use.typekit.net/tme8vlr.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <!-- created a div with an image and an h1 to later format the title on top of the image -->
+        <div class="banner">
+            <img src="images/bakery-header.jpg" class="bakery-background" alt="photo of bakery"/>
+            <h1> The Bakery Bonanza </h1>
+        </div>
+
+        <!-- created a navigation bar for the webpage with an unordered list to link to other html pages -->
+        <nav class="main-nav">
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+     <!-- created a container for all content besides the header and footer
+    to later customize the margin and padding for the page in css -->
+    <div class="container contact-grid">
+
+        <!-- created sections for the location, schedule, and form to format into a grid system for css -->
+        <section class="location">
+            <h2>Where to Find Us</h2>
+
+            <!-- used an iframe element to embed a google map in my html for viewing
+            the store location visually -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d701.722659580012!2d-75.9046433707653!3d45.29043159869373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccdff79fee77b8f%3A0x52f9c1efee2bad9c!2s5487%20Hazeldean%20Rd%2C%20Stittsville%2C%20ON%20K2S%200P5!5e0!3m2!1sen!2sca!4v1583110158537!5m2!1sen!2sca" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+            <p>4-5487 Hazeldean Road</p>
+            <p>Ottawa, ON</p>
+            <p>K2S 0P5</p>
+        </section>
+
+        <section class="schedule">
+            <h2>Our Schedule</h2>
+            
+            <!-- created a table to show store times for the week -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Day</th>
+                        <th>Hours</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Monday</td>
+                        <td>9am - 8pm</td>
+                    </tr>
+                    <tr>
+                        <td>Tuesday</td>
+                        <td>9am - 8pm</td>
+                    </tr>
+                    <tr>
+                        <td>Wednesday</td>
+                        <td>9am - 8pm</td>
+                    </tr>
+                    <tr>
+                        <td>Thursday</td>
+                        <td>9am - 8pm</td>
+                    </tr>
+                    <tr>
+                        <td>Friday</td>
+                        <td>10am - 8pm</td>
+                    </tr>
+                    <tr>
+                        <td>Saturday</td>
+                        <td>10am - 7pm</td>
+                    </tr>
+                    <tr>
+                        <td>Sunday</td>
+                        <td>OFF</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="form-wrap">
+            <h2>Catering Events</h2>
+
+            <!-- created a form for people to apply for catering events for the store -->
+            <form action="somePhpPage.php" method="POST" id="htmlForm">
+                <div class="textFieldone">
+                    <label for="firstName">First Name:</label>
+                    <input
+                    type="text"
+                    name="firstName"
+                    id="firstName"
+                    placeholder="Joe"
+                    required>
+                </div>
+
+                <div class="textFieldtwo">
+                    <label for="lastName">Last Name:</label>
+                    <input
+                    type="text"
+                    name="lastName"
+                    id="lastName"
+                    placeholder="Smith"
+                    required>
+                </div>
+
+                <div class="textFieldthree">
+                    <label for="ev">Event:</label>
+                    <input type="text"
+                    name="ev"
+                    id="ev"
+                    placeholder="Party"
+                    required>
+                </div>
+
+                <div>
+                    <label for="da">Event Date:</label>
+                    <input type="date" name="da" id="da" required>
+                </div>
+
+                <div>
+                    <label for="em">Email:</label>
+                    <input type="email" name="em" id="em" placeholder="joesmith@gmail.com" required>
+                </div>
+
+                <div>
+                    <label for="tel">Phone Number:</label>
+                    <input type="tel" name="tel" id="tel" placeholder="613 316 6136" required>
+                </div>
+
+                <div>
+                    <label for="comments">Comments:</label>
+                    <textarea name="comments" id="comments" cols="30" rows="10"></textarea>
+                </div>
+
+                <div>
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </section>
+
+    </div>
+
+    <footer>
+        Copyright &copy; The Bakery Bonanza 2020
+    </footer>
+
+</body>
+
+</html>
